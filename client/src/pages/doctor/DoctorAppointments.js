@@ -79,7 +79,7 @@ const DoctorAppointments = () => {
                 className="btn btn-success"
                 onClick={() => handleStatus(record, "approved")}
               >
-                Approved
+                Approve
               </button>
               <button
                 className="btn btn-danger ms-2"
@@ -95,7 +95,6 @@ const DoctorAppointments = () => {
   ];
   return (
     <Layout>
-      <h1>Appoinmtnets Lists</h1>
       <Table columns={columns} dataSource={appointments} />
     </Layout>
   );

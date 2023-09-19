@@ -65,18 +65,17 @@ const NotificationPage = () => {
   };
   return (
     <Layout>
-      <h4 className="p-3 text-center">Notification Page</h4>
       <Tabs>
-        <Tabs.TabPane tab="unRead" key={0}>
+        <Tabs.TabPane tab="Unread" key={0}>
           <div className="d-flex justify-content-end">
-            <h4 className="p-2" onClick={handleMarkAllRead}>
+            <h4 className="p-2 bg-blue-500 p-10 text-white rounded-md cursor-pointer mr-10" onClick={handleMarkAllRead}>
               Mark All Read
             </h4>
           </div>
           {user?.notifcation.map((notificationMgs) => (
-            <div className="card" style={{ cursor: "pointer" }}>
+            <div className="card m-1 border-none bg-gray-100" style={{ cursor: "pointer" }}>
               <div
-                className="card-text"
+                className="card-text p-2 ml-2"
                 onClick={() => navigate(notificationMgs.onClickPath)}
               >
                 {notificationMgs.message}
@@ -87,7 +86,7 @@ const NotificationPage = () => {
         <Tabs.TabPane tab="Read" key={1}>
           <div className="d-flex justify-content-end">
             <h4
-              className="p-2 text-primary"
+              className="p-2 bg-red-500 p-10 text-white rounded-md cursor-pointer mr-10 mb-2"
               style={{ cursor: "pointer" }}
               onClick={handleDeleteAllRead}
             >
@@ -95,9 +94,9 @@ const NotificationPage = () => {
             </h4>
           </div>
           {user?.seennotification.map((notificationMgs) => (
-            <div className="card" style={{ cursor: "pointer" }}>
+            <div className="card m-1 border-none bg-gray-100" style={{ cursor: "pointer" }}>
               <div
-                className="card-text"
+                className="card-text p-2 ml-2"
                 onClick={() => navigate(notificationMgs.onClickPath)}
               >
                 {notificationMgs.message}
