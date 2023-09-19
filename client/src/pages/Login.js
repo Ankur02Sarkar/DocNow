@@ -44,10 +44,10 @@ const Login = () => {
         <Form.Item label="Password" name="password">
           <Input type="password" required />
         </Form.Item>
-        <Link to="/register" className="m-2">
+        <Link to="/register" className="m-2 text-blue-500">
           Not a user Register here
         </Link>
-        <button className="btn btn-primary" type="submit">
+        <button className="btn btn-primary text-blue-700 font-bold" type="submit">
           Login
         </button>
       </Form>
