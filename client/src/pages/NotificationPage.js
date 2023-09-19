@@ -65,15 +65,21 @@ const NotificationPage = () => {
   };
   return (
     <Layout>
-      <Tabs>
-        <Tabs.TabPane tab="Unread" key={0}>
+      <Tabs className="ml-2">
+        <Tabs.TabPane tab="Unread" key={0} >
           <div className="d-flex justify-content-end">
-            <h4 className="p-2 bg-blue-500 p-10 text-white rounded-md cursor-pointer mr-10" onClick={handleMarkAllRead}>
+            <h4
+              className="p-2 bg-blue-500 p-10 text-white rounded-md cursor-pointer mr-10"
+              onClick={handleMarkAllRead}
+            >
               Mark All Read
             </h4>
           </div>
           {user?.notifcation.map((notificationMgs) => (
-            <div className="card m-1 border-none bg-gray-100" style={{ cursor: "pointer" }}>
+            <div
+              className="card m-1 border-none bg-gray-100"
+              style={{ cursor: "pointer" }}
+            >
               <div
                 className="card-text p-2 ml-2"
                 onClick={() => navigate(notificationMgs.onClickPath)}
@@ -94,7 +100,10 @@ const NotificationPage = () => {
             </h4>
           </div>
           {user?.seennotification.map((notificationMgs) => (
-            <div className="card m-1 border-none bg-gray-100" style={{ cursor: "pointer" }}>
+            <div
+              className="card m-1 border-none bg-gray-100"
+              style={{ cursor: "pointer" }}
+            >
               <div
                 className="card-text p-2 ml-2"
                 onClick={() => navigate(notificationMgs.onClickPath)}
