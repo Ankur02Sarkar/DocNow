@@ -22,9 +22,9 @@ const systemMessage = {
 function Doctorbot() {
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm ChatGPT! Ask me anything!",
+      message: "Hello, I'm DocNow! Ask me anything!",
       sentTime: "just now",
-      sender: "ChatGPT",
+      sender: "DocNow",
     },
   ]);
   const [isTyping, setIsTyping] = useState(false);
@@ -54,7 +54,7 @@ function Doctorbot() {
 
     let apiMessages = chatMessages.map((messageObject) => {
       let role = "";
-      if (messageObject.sender === "ChatGPT") {
+      if (messageObject.sender === "DocNow") {
         role = "assistant";
       } else {
         role = "user";
@@ -90,7 +90,7 @@ function Doctorbot() {
           ...chatMessages,
           {
             message: data.choices[0].message.content,
-            sender: "ChatGPT",
+            sender: "DocNow",
           },
         ]);
         setIsTyping(false);
@@ -107,7 +107,7 @@ function Doctorbot() {
                 scrollBehavior="smooth"
                 typingIndicator={
                   isTyping ? (
-                    <TypingIndicator content="ChatGPT is typing" />
+                    <TypingIndicator content="DocNow is typing" />
                   ) : null
                 }
               >
