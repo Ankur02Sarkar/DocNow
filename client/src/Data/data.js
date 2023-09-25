@@ -10,6 +10,16 @@ export const userMenu = [
     icon: "fa-solid fa-list",
   },
   {
+    name: "Appointment Bot",
+    path: "/docnowbot",
+    icon: "fa-solid fa-robot",
+  },
+  {
+    name: "Doctor Bot",
+    path: "/doctorbot",
+    icon: "fa-solid fa-robot",
+  },
+  {
     name: "Apply Doctor",
     path: "/apply-doctor",
     icon: "fa-solid fa-user-doctor",

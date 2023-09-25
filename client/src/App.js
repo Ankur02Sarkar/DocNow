@@ -14,6 +14,8 @@ import Profile from "./pages/doctor/Profile";
 import BookingPage from "./pages/BookingPage";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/doctor/DoctorAppointments";
+import DocnowBot from "./components/DocnowBot";
+import Doctorbot from "./pages/Doctorbot"
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (
@@ -92,6 +94,22 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Appointments />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/docnowbot"
+              element={
+                <ProtectedRoute>
+                  <DocnowBot />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/doctorbot"
+              element={
+                <ProtectedRoute>
+                  <Doctorbot/>
                 </ProtectedRoute>
               }
             />
