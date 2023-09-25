@@ -16,7 +16,7 @@ const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
   role: "system",
   content:
-    "Explain things like you're talking to a software professional with 2 years of experience.",
+    "You are a Highly experienced Doctor and your job is to identify diseases and give proper cure",
 };
 
 function Doctorbot() {
